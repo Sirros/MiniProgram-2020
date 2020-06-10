@@ -31,8 +31,6 @@
     <button class="cu-btn bg-blue shadow-blur round lg" bindtap="toGetRes">识别</button>
   </view>
   <view class='cu-load load-modal' wx:if="{{loadModal}}">
-    <!-- <view class='cuIcon-emojifill text-orange'></view> -->
-    <image src='/images/logo.png' class='png' mode='aspectFit'></image>
-    <view class='gray-text'>加载中...</view>
+    <view class='gray-text'>{{ loadingText }}</view>
   </view>
 </scroll-view>

@@ -9,6 +9,7 @@ Page({
   data: {
     imgList: [], // 图片
     loadModal: false, // 识别动画控制
+    loadingText: '',
     analysisRES: '',
     fileID:'1',
     tempFilePaths:''
@@ -21,11 +22,21 @@ Page({
    */
   // 选择图片
   ChooseImage() {
+    let that = this
     wx.chooseImage({
       count: 1, //默认9
       sizeType: ['compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'],  // 本地相册选择、拍照
+      complete: () => {
+        that.setData({
+          loadModal: true,
+          loadingText: '图片上传...'
+        })
+      },
       success: (res) => {
+        that.setData({
+          loadModal: false
+        })
         console.log("Select Image Success!")
         this.setData({
           imgList: res.tempFilePaths  // 保存图片url到本地，以便展示以及删除
@@ -42,13 +53,25 @@ Page({
           success:(res)=> {  
             console.log("Upload Image Success!")
             this.fileID = res.fileID 
+            this.setData({
+              loadModal: false
+            })
           },
           fail(err) {
+            that.setData({
+              loadModal: false
+            })
             console.log("Upload Image Fail...")
+            this.setData({
+              loadModal: true
+            })
           }
         })
       },
       fail: (err) => {
+        that.setData({
+          loadModal: false
+        })
         console.log("Select Image Fail...")
       }
     });
@@ -79,6 +102,11 @@ Page({
   },
   // 腾讯AI通用OCR接口文档：https://ai.qq.com/doc/ocrgeneralocr.shtml
   toGetRes() {
+    this.setData({
+      loadModal: true,
+      loadingText: '识别图片...'
+    })
+    let that = this
     wx.cloud.callFunction({
       name:"RegularOCR",
       data:{
@@ -86,6 +114,9 @@ Page({
       str:this.fileID
     },
     success:res => {
+      that.setData({
+        loadModal: false
+      })
       this.analysisRES = res,
       console.log('[云函数] [OCRUtil] 调用成功')
       console.log(res)

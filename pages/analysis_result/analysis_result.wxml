@@ -1,5 +1,23 @@
-<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+<cu-custom bgColor="bg-gradual-blue" isBack="{{ true }}">
   <view slot="backText">返回</view>
-  <view slot="content">识别结果</view>
 </cu-custom>	 
-<view>{{result}}哈哈哈哈</view>	
+<view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-grey first-sub-content">营养元素</text>
+      <view class="content second-sub-content">
+        <text class="text-grey content-item">每100克</text>
+        <text class="text-grey content-item">备注</text>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item" wx:for="{{ result }}">
+    <view class="content">
+      <text class="text-black first-sub-content">{{ item.name }}</text>
+      <view class="content second-sub-content">
+        <text class="text-black content-item">{{ item.value }}</text>
+        <text class="text-black content-item">{{ item.caution }}</text>
+      </view>
+    </view>
+  </view>
+</view>

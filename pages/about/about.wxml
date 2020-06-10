@@ -4,11 +4,10 @@
       <view class="cu-avatar-group">
         <!-- 遍历渲染头像 -->
         <view class="cu-avatar round lg" 
-              wx:for="{{avatarList}}" wx:key="{{index}}" style="background-image:url({{item.avatarUrl}});">
+              wx:for="{{avatarList}}" wx:key="{{ index }}" style="background-image:url({{ item.avatarUrl }});">
         </view>
       </view>
   </view>
-
     <image src="../../static/images/wave.gif" mode="scaleToFill" class="gif-wave"></image>
   </view>
 

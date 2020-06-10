@@ -25,7 +25,7 @@
   height: 200rpx;
 }
 
-.UCenter-bg .gif-wave{
+.UCenter-bg .gif-wave {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -35,14 +35,14 @@
   height: 100rpx;   
 }
 
-map, .mapBox{
+map, .mapBox {
   left: 0;
   z-index: 99;
   mix-blend-mode: screen;  
   height: 100rpx;   
 }
 
-map, .mapBox{
+map, .mapBox {
   width: 750rpx;
   height: 300rpx;
 }

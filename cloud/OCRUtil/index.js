@@ -13,17 +13,17 @@ exports.main = async (event,context) =>{
   console.log('444')
   const img1 = await cloud.downloadFile({
     fileID: event.str,
-    })
+  })
   let buffer =new Buffer(img1.fileContent)
   let rtn = ''
   return new Promise((resolve, reject) => {
     ocr.generalocr(buffer.toString('base64'))
-    .then(res => {
-      rtn = JSON.stringify(res.data)
-      console.log(rtn);
-      resolve(res.data);
-    }, (e) => {
-      reject(JSON.stringify(e));
-    })
+      .then(res => {
+        rtn = JSON.stringify(res.data)
+        console.log(rtn);
+        resolve(res.data);
+      }, (e) => {
+        reject(JSON.stringify(e));
+      })
   })
 }
