@@ -1,0 +1,71 @@
+<view hidden="{{mainContentHidden}}">
+  <cu-custom bgColor="bg-gradual-green">
+    <view slot="content">食品成分分析</view>
+  </cu-custom>
+  <scroll-view>
+    <!-- 内容块 -->
+    <view class="bg-gray radius shadow-blur">
+      <!-- 轮播图 -->
+      <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+        <swiper-item wx:for="{{swiperList}}" wx:key>
+          <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+          <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+        </swiper-item>
+      </swiper>
+      <!-- 卡片 -->
+      <view class="cu-card case shadow-warp text-center">
+        <view class="cu-item shadow card-btn">
+          <button class="cu-btn  bg-blue lg" role="button" aria-disabled="false" bindtap="toAnalysis">开始识别</button>
+          <view class="text-olive text-center card-btn-title"> 
+            <text>点击上传食品营养表，摄入最健康的营养成分</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- 科普知识卡片 -->
+      <view class="cu-bar bg-white solid-bottom">
+        <!-- 卡片头 -->
+        <view class='action'>
+          <text class='cuIcon-titles text-orange '></text> 健康小知识
+        </view>
+      </view>
+      <!-- 功能列表 -->
+      <view class="content-list">
+        <view class="cu-list grid col-{{gridCol}} gridBorder">
+          <view class="cu-item" wx:if="{{index < gridCol * 2}}" wx:for="{{iconList}}" wx:key="{{index}}" data-id="{{item.id}}" id="{{item.id}}"bindtap="crowdTap">
+            <!-- icon -->
+            <view class="cuIcon-{{item.icon}} text-{{item.color}}"></view>
+            <text>{{item.name}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- 卡片内容 -->
+      <view class="cu-card article no-card solid's'-bottom" 
+            bindtap="toDetail" data-id="{{article.id}}"  id="{{article.id}}"
+            wx:for="{{articles}}" wx:for-item="article">
+        <view class="cu-item shadow">
+            <view class="title">
+              <view class="text-cut">{{article.title}}</view>
+            </view>
+            <view class="content">
+              <!-- <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="aspectFill"></image> -->
+              <image src="{{article.imageSrc}}" mode="aspectFill"></image>
+              <view class="desc">
+                <view class="text-content">{{article.content}}</view>
+                <view>
+                  <view class="cu-tag bg-red light sm round">高血脂</view>
+                  <!-- <view class="cu-tag bg-green light sm round">长高</view> -->
+                </view>
+              </view>
+            </view>
+          </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- loading动画 -->
+<view class="bg-white flex-sub radius shadow-lg lodingTag" hidden="{{!mainContentHidden}}">
+    <image src="https://image.weilanwl.com/gif/loading-white.gif" 
+           mode="aspectFit" class="gif-white response" 
+           style="height:240rpx"></image>
+</view>

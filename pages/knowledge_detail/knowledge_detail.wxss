@@ -1,0 +1,6 @@
+.detail-head {
+  padding: 20rpx 15rpx;
+}
+.detail-head  {
+  font-size: larger;
+}

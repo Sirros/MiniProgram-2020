@@ -1,0 +1,21 @@
+.card-btn {
+  padding: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card-btn > button {
+  margin-bottom: 20rpx;
+}
+.card-btn .card-btn-title {
+  padding: 10rpx;
+  border-top: 1rpx solid #e4e4e4;
+  color: rgba(170, 167, 167, 0.884);
+}
+.lodingTag {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,5 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">识别结果</view>
+</cu-custom>	 
+<view>{{result}}哈哈哈哈</view>	
