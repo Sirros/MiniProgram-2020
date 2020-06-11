@@ -44,7 +44,6 @@ Page({
         this.tempFilePaths = res.tempFilePaths[0]
         console.log(this.tempFilePaths)
         let targetImage = res.tempFilePaths
-        let self = this
         // 选择图片之后就进行上传
         wx.cloud.uploadFile({
           cloudPath: 'img_tmp/'+(new Date()).valueOf()+'pic.png',
@@ -53,7 +52,7 @@ Page({
           success:(res)=> {  
             console.log("Upload Image Success!")
             this.fileID = res.fileID 
-            this.setData({
+            that.setData({
               loadModal: false
             })
           },
@@ -100,8 +99,9 @@ Page({
       }
     })
   },
+  // 营养成分分析
   // 腾讯AI通用OCR接口文档：https://ai.qq.com/doc/ocrgeneralocr.shtml
-  toGetRes() {
+  toGetIngredientRes() {
     this.setData({
       loadModal: true,
       loadingText: '识别图片...'
@@ -129,16 +129,10 @@ Page({
       }
     })    
     console.log(this.analysisRES)
-    // if(this.data.analysisRES == '') {
-    //   wx.showModal({
-    //     title: 'Sorry',
-    //     content: '请稍后重试',
-    //     showCancel: false
-    //   })
-    // } else {
-    //   console.log(this.data.analysisRES)
-    // }
-    
+  },
+  // 配料表分析
+  toGetListRes() {
+
   },
 
   onLoad: function() {

@@ -28,7 +28,8 @@
     </view>
   </view>
   <view class="cu-bar btn-group">
-    <button class="cu-btn bg-blue shadow-blur round lg" bindtap="toGetRes">识别</button>
+    <button class="cu-btn bg-blue shadow-blur" bindtap="toGetIngredientRes">营养成分分析</button>
+    <button class="cu-btn bg-blue shadow-blur" bindtap="toGetListRes">配料表分析</button>
   </view>
   <view class='cu-load load-modal' wx:if="{{loadModal}}">
     <view class='gray-text'>{{ loadingText }}</view>
