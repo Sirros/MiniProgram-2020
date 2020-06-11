@@ -22,21 +22,17 @@ Page({
    */
   // 选择图片
   ChooseImage() {
-    let that = this
     wx.chooseImage({
       count: 1, //默认9
       sizeType: ['compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'],  // 本地相册选择、拍照
       complete: () => {
-        that.setData({
+        this.setData({
           loadModal: true,
           loadingText: '图片上传...'
         })
       },
       success: (res) => {
-        that.setData({
-          loadModal: false
-        })
         console.log("Select Image Success!")
         this.setData({
           imgList: res.tempFilePaths  // 保存图片url到本地，以便展示以及删除
@@ -44,6 +40,7 @@ Page({
         this.tempFilePaths = res.tempFilePaths[0]
         console.log(this.tempFilePaths)
         let targetImage = res.tempFilePaths
+        let that = this
         // 选择图片之后就进行上传
         wx.cloud.uploadFile({
           cloudPath: 'img_tmp/'+(new Date()).valueOf()+'pic.png',
@@ -57,17 +54,15 @@ Page({
             })
           },
           fail(err) {
-            that.setData({
-              loadModal: false
-            })
             console.log("Upload Image Fail...")
             this.setData({
-              loadModal: true
+              loadModal: false
             })
           }
         })
       },
       fail: (err) => {
+        let that = this
         that.setData({
           loadModal: false
         })
