@@ -1,15 +1,29 @@
 .content {
-  padding: 0 10rpx;
+  padding: 0 6rpx;
   display: flex;
   width: 100%;
 }
 
 .first-sub-content {
-  width: 50%;
+  width: 30%;
+  text-align: left;
 }
 
 .second-sub-content {
   flex: 1;
   display: flex;
-  justify-content: space-between;
+  text-align: right;
+  /* justify-content: space-between; */
+}
+
+.content-item1 {
+  flex: 1;
+}
+
+.content-item2 {
+  width: 30%;
+}
+
+.content-item3{
+  width: 30%;
 }

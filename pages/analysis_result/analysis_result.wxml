@@ -1,22 +1,38 @@
 <cu-custom bgColor="bg-gradual-blue" isBack="{{ true }}">
   <view slot="backText">返回</view>
 </cu-custom>	 
+<view class="padding flex text-center text-grey bg-white shadow-warp margin-bottom">
+    <view class="flex flex-sub flex-direction solid-right">
+      <view class="margin-top-sm">
+        <text class="cuIcon-favorfill"></text>分析结果
+      </view>
+    </view>
+  </view>
 <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
   <view class="cu-item">
     <view class="content">
-      <text class="text-grey first-sub-content">营养元素</text>
+      <view class="first-sub-content">
+        <text class="text-grey ">营养元素</text>
+      </view>
       <view class="content second-sub-content">
-        <text class="text-grey content-item">每100克</text>
-        <text class="text-grey content-item">备注</text>
+        <text class="text-grey content-item1">每100克</text>
+        <text class="text-grey content-item2">nrv</text>
+        <text class="text-grey content-item3">备注</text>
       </view>
     </view>
   </view>
   <view class="cu-item" wx:for="{{ result }}">
-    <view class="content">
+    <view class="content text-df">
       <text class="text-black first-sub-content">{{ item.name }}</text>
-      <view class="content second-sub-content">
-        <text class="text-black content-item">{{ item.value }}</text>
-        <text class="text-black content-item">{{ item.caution }}</text>
+      <view class="content second-sub-content text-df">
+        <text class="text-black content-item1">{{ item.value }}</text>
+        <text class="text-black content-item2">{{ item.nrv }}</text>
+        <text class="text-black content-item3">{{ item.caution }}</text>
+        <!-- <view class="padding-xs content-item3">
+          <view class="cu-tag bg-red" wx:if="{{type === 'high'}}">高</view>
+          <view class="cu-tag bg-green" wx:if="{{type === 'normal'}}">正常</view>
+          <view class="cu-tag bg-green light" wx:if="{{type === 'low'}}">低</view>
+        </view> -->
       </view>
     </view>
   </view>

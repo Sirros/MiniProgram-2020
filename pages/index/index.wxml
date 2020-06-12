@@ -41,7 +41,7 @@
       </view>
       <!-- 卡片内容 -->
       <view class="cu-card article no-card solid's'-bottom" 
-            bindtap="toDetail" data-id="{{article.id}}"  id="{{article.id}}"
+            bindtap="toDetail" data-_id="{{article._id}}"  _id="{{article._id}}"
             wx:for="{{articles}}" wx:for-item="article">
         <view class="cu-item shadow">
             <view class="title">
@@ -49,7 +49,7 @@
             </view>
             <view class="content">
               <!-- <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="aspectFill"></image> -->
-              <image src="{{article.imageSrc}}" mode="aspectFill"></image>
+              <image src="{{article.head_img_url}}" mode="aspectFill"></image>
               <view class="desc">
                 <view class="text-content">{{article.content}}</view>
                 <view>
