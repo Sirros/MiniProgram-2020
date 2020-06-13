@@ -5,12 +5,8 @@
 <scroll-view>
   <view class="detail-head bg-white">
     <view class="text-black text-bold">{{articles.title}}</view>
-    <view>
-      <view class="cu-tag bg-red light sm round">减肥</view>
-      <view class="cu-tag bg-green light sm round">长高</view>
-    </view>
   </view>
-  <view class="flex justify-center image">
+  <view class="flex justify-center bg-white image">
     <image mode="widthFix"src="{{articles.imageSrc}}"style="height: 176.348px;"></image>
   </view>
   <view class='bg-white padding-xl radius shadow-lg'>
@@ -20,7 +16,7 @@
       </view>
     </view>
   </view>
-  <view class="flex justify-center image margin-bottom">
+  <view class="flex justify-center bg-white image margin-bottom">
     <image mode="widthFix"src="{{articles.contentTitleImage}}"style="height: 176.348px;"></image>
   </view>
 </scroll-view>

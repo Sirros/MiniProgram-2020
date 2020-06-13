@@ -20,7 +20,6 @@ Page({
         ],
         imageSrc: 'http://sucai.qm120.com/image/2020/05/12/114205_20199.jpg',
         contentTitleImage: 'http://sucai.qm120.com/image/2020/05/12/20200512114052_55218.jpg'
-        // types: []
       },
       {
         id: "1",
@@ -68,7 +67,6 @@ Page({
         ],
         imageSrc: 'https://pics3.baidu.com/feed/d1a20cf431adcbef4dde6852c37e88dba1cc9fd7.jpeg?token=e195aac81f2f4c998e91075d21753cfe',
         contentTitleImage: ''
-        // types: []
       },
       {
         id: "3",
@@ -89,7 +87,6 @@ Page({
         ],
         imageSrc: 'http://5b0988e595225.cdn.sohucs.com/images/20190418/7b77e2caa6684eeda19bc0f49db62add.jpeg',
         contentTitleImage: 'https://z.xiziwang.net/uploads/allimg/190106/39_190106194208_1.jpg'
-        // types: []
       },
       {
         id: "4",
@@ -108,7 +105,6 @@ Page({
         ],
         imageSrc: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2332650743,733295242&fm=26&gp=0.jpg',
         contentTitleImage: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589290086591&di=a7928b9183b668451229e21ac70bdc8e&imgtype=0&src=http%3A%2F%2Fxiaomi.wstmart.net%2Fupload%2Fimage%2F2016-10%2F5804462074fcc.jpg'
-        // types: []
       },
       {
         id: "5",
@@ -121,7 +117,6 @@ Page({
         ],        
         imageSrc: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589290708129&di=e6be7c05f662eb8933fcd85abdd2672a&imgtype=0&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D449199374%2C3638626548%26fm%3D214%26gp%3D0.jpg',
         contentTitleImage: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589290707661&di=0b4b59118113033a1e0c62ce85de66d9&imgtype=0&src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20161213%2Ff4496899a54345708851153dc6738e06_th.jpeg'
-        // types: []
       },
       {
         id: "6",
@@ -139,7 +134,6 @@ Page({
         ],
         imageSrc: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589290394017&di=c605fa11df661da4f064ece0836383a4&imgtype=0&src=http%3A%2F%2Fimg14.360buyimg.com%2Fn12%2Fjfs%2Ft3916%2F3%2F2180588443%2F430755%2F335b1cb5%2F58a40cffN94d3f5b2.jpg',
         contentTitleImage: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3231946658,1363318608&fm=26&gp=0.jpg'
-        // types: []
       },
       {
         id: "7",
@@ -181,7 +175,6 @@ Page({
         ],
         imageSrc: 'http://images.meishij.net/p/20140306/3a6a109b10efafe32c409853f15570cb.jpg',
         contentTitleImage: 'https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2399684581,1168916341&fm=26&gp=0.jpg'
-        // types: []
       },
       {
         id: "9",
@@ -198,7 +191,6 @@ Page({
         ], 
         imageSrc: 'http://images.meishij.net/p/20140109/e1cd82757ebf32d6deffff1ecf75b284.jpg',
         contentTitleImage: 'https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=475771685,1459815651&fm=26&gp=0.jpg'
-        // types: []
       },
       {
         id: "10",
@@ -214,19 +206,15 @@ Page({
         ],
         imageSrc: 'http://images.meishij.net/p/20200423/ea04892aba069f08729eaa83f838292b.jpg',
         contentTitleImage: 'http://images.meishij.net/p/20200423/8ff629bffa67cbbd409100981d4a7ca1.jpg'
-        // types: []
       }
-    ]
+    ],
+    tempList: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    db.collection('news_list').get().then(res => {
-      console.log(res)
-    })
-
     console.log(options)
     // 接收id
     let articleId = options.id
