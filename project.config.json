@@ -72,6 +72,20 @@
 					"id": -1,
 					"name": "pages/component_analysis/component_analysis",
 					"pathName": "pages/component_analysis/component_analysis",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "配料表分析结果",
+					"pathName": "pages/ingredients_result/ingredients_result",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/ingredients_result/ingredients_result",
+					"pathName": "pages/ingredients_result/ingredients_result",
 					"scene": null
 				}
 			]

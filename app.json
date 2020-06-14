@@ -5,7 +5,9 @@
     "pages/knowledge_detail/knowledge_detail",
     "pages/component_analysis/component_analysis",
     "pages/about/about",
-    "pages/crowdDetail/crowdDetail"
+    "pages/crowdDetail/crowdDetail",
+    "pages/ingredients_result/ingredients_result",
+    "pages/ingredients_detail/ingredients_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,14 +1,17 @@
 <cu-custom bgColor="bg-gradual-blue" isBack="{{ true }}">
   <view slot="backText">返回</view>
+  <view slot="content">养分识别结果</view>
 </cu-custom>	 
-<view class="padding flex text-center text-grey bg-white shadow-warp margin-bottom">
-    <view class="flex flex-sub flex-direction solid-right">
-      <view class="margin-top-sm">
-        <text class="cuIcon-favorfill"></text>分析结果
-      </view>
-    </view>
+<view class="cu-bar bg-white search fixed" style="top:{{ CustomBar }}px;">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="请输入需要查看详情的成分名称" bindinput="getIndex" confirm-type="search"></input>
   </view>
-<view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+  <view class="action">
+    <button class="cu-btn bg-gradual-blue shadow-blur round" bindtap="searchDetail">搜索详情</button>
+  </view>
+</view>
+<view class="cu-list menu menuBorder" style="margin-top:{{ CustomBar }}px;">
   <view class="cu-item">
     <view class="content">
       <view class="first-sub-content">
@@ -23,7 +26,7 @@
   </view>
   <view class="cu-item" wx:for="{{ result }}">
     <view class="content text-df">
-      <text class="text-black first-sub-content">{{ item.name }}</text>
+      <text class="text-black first-sub-content" bindtap="goToDetail">{{ item.name }}</text>
       <view class="content second-sub-content text-df">
         <text class="text-black content-item1">{{ item.value }}</text>
         <text class="text-black content-item2">{{ item.nrv }}</text>

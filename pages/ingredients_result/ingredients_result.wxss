@@ -1,0 +1,37 @@
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background: rgb(51, 156, 255);
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+
+.th-level, .td-level {
+  width: 10%;
+}
+.th-risk, .td-risk {
+  width: 40%;
+}

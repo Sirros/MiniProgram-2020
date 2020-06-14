@@ -1,0 +1,7 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">配料详情</view>
+</cu-custom>
+<view wx:for="{{ detailInfo[0] }}" wx:for-index="key" wx:for-item="value">
+  {{ key }} : {{ value }}
+</view>

@@ -26,11 +26,14 @@ Page({
       count: 1, //默认9
       sizeType: ['compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'],  // 本地相册选择、拍照
-      complete: () => {
-        this.setData({
-          loadModal: true,
-          loadingText: '图片上传...'
-        })
+      complete: (info) => {
+        console.log(info)
+        if(info.errMsg !== 'chooseImage:fail cancel') {
+          this.setData({
+            loadModal: true,
+            loadingText: '图片上传...'
+          })
+        }
       },
       success: (res) => {
         console.log("Select Image Success!")
@@ -106,9 +109,9 @@ Page({
       name:"RegularOCR",
       data:{
       //img:wx.getFileSystemManager().readFileSync(this.tempFilePaths, "base64")
-      str:this.fileID
+      str: this.fileID
     },
-    success:res => {
+    success: res => {
       that.setData({
         loadModal: false
       })
@@ -116,7 +119,7 @@ Page({
       console.log('[云函数] [OCRUtil] 调用成功')
       console.log(res)
       wx.navigateTo({
-        url: '../analysis_result/analysis_result?result='+res.result,
+        url: '../analysis_result/analysis_result?result=' + res.result,
       })
     },
       fail: err => { 
@@ -127,7 +130,34 @@ Page({
   },
   // 配料表分析
   toGetListRes() {
-
+    console.log('配料表分析')
+    this.setData({
+      loadModal: true,
+      loadingText: '识别图片...'
+    })
+    let that = this
+    wx.cloud.callFunction({
+      name: 'IngrediantOCR',
+      data: {
+        str: this.fileID
+      },
+      success: (res) => {
+        console.log('云函数] [OCRUtil] 调用成功，res')
+        console.log(res.result)
+        that.setData({
+          loadModal: false
+        })
+        wx.navigateTo({
+          url: '../ingredients_result/ingredients_result?result=' + res.result,
+        })
+      },
+      fail: (err) => {
+        console.log("[云函数] [OCRUtil] 调用失败", err)
+        that.setData({
+          loadModal: false
+        })
+      }
+    })
   },
 
   onLoad: function() {
