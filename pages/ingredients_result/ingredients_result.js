@@ -53,7 +53,7 @@ Page({
         // })
         // console.log(this.data.detailInfo)
         wx.navigateTo({
-          url: '../ingredients_detail/ingredients_detail?detailInfo=' + JSON.stringify(res.data),
+          url: '../ingredients_detail/ingredients_detail?detailInfo=' + JSON.stringify(res.data)
         })
       },
       fail: err => {
