@@ -13,14 +13,17 @@ Page({
    */
   onLoad: function (options) {
     console.log(options)
-    let temp = JSON.parse(options.detailInfo)
-    console.log(temp)
-    delete temp[0].id
-    delete temp[0]._id
-    this.setData({
-      detailInfo: temp
-      // detailInfo: JSON.parse(options.detailInfo)
-    })
-    console.log(this.data.detailInfo)
+    if(options !== '[]') {
+      let temp = JSON.parse(options.detailInfo)
+      console.log(temp)
+      if(temp.length !== 0) {
+        delete temp[0].id
+        delete temp[0]._id
+        this.setData({
+          detailInfo: temp
+        })
+      }
+      console.log(this.data.detailInfo)
+    }
   }
 })
