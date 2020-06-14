@@ -11,135 +11,75 @@ Page({
         {
           id: 0,
           type: 'image',
-          url: 'https://previews.123rf.com/images/sbego/sbego1506/sbego150600029/41822257-group-of-children-with-fruits.jpg'
+          url: 'https://cp.cw1.tw/files/md5/03/4a/034ae161b73c8c030f68658547a9f06e-132773.jpg'
         },
         {
           id: 1,
           type: 'image',
-          url: 'http://img5.imgtn.bdimg.com/it/u=2545311149,2756468368&fm=26&gp=0.jpg'
+          url: 'https://cdn2.ettoday.net/images/3593/d3593924.jpg'
         },
         {
           id: 2,
           type: 'image',
-          url: 'https://previews.123rf.com/images/virinka/virinka1212/virinka121200020/16694385-cartoon-children-with-fruits.jpg'
-        },
-        {
-          id: 3,
-          type: 'image',
-          url: 'http://img1.imgtn.bdimg.com/it/u=390439293,432794668&fm=26&gp=0.jpg'
-        },
-        {
-          id: 4,
-          type: 'image',
-          url: 'http://img0.imgtn.bdimg.com/it/u=3532136509,714403793&fm=26&gp=0.jpg'
+          url: 'https://s3-ap-southeast-1.amazonaws.com/mababy-production/knowledge/dea9cf57-83ec-4cd4-aafe-7c3607c21581'
         }
       ],
       teenagers: [
         {
           id: 0,
           type: 'image',
-          url: 'https://previews.123rf.com/images/sbego/sbego1506/sbego150600029/41822257-group-of-children-with-fruits.jpg'
+          url: 'https://thumbs.dreamstime.com/b/e-r-132185883.jpg'
         },
         {
           id: 1,
           type: 'image',
-          url: 'http://img5.imgtn.bdimg.com/it/u=2545311149,2756468368&fm=26&gp=0.jpg'
+          url: 'https://lh3.googleusercontent.com/proxy/d1PwZJLJzBjwtEiboTzAbEOPlsYOw_WnPSsssMqiGKbp6rNY_BdBkgWo0J_d4dVC0XPSyon9E1k0WqgC0pLeEG0XFFe19Z1z0s-_H_Uezb9E8erWlVdf7mHAWs8'
         },
         {
           id: 2,
           type: 'image',
-          url: 'https://previews.123rf.com/images/virinka/virinka1212/virinka121200020/16694385-cartoon-children-with-fruits.jpg'
-        },
-        {
-          id: 3,
-          type: 'image',
-          url: 'http://img1.imgtn.bdimg.com/it/u=390439293,432794668&fm=26&gp=0.jpg'
-        },
-        {
-          id: 4,
-          type: 'image',
-          url: 'http://img0.imgtn.bdimg.com/it/u=3532136509,714403793&fm=26&gp=0.jpg'
+          url: 'https://lh3.googleusercontent.com/proxy/2uIIGmQqmK3wshHNR2oNoHtrk6jW4fAdGL8UJza4W0ATUkF6fhqLk2LZ4spYwRGmm4VAx4wihjj1tLFopyBJzjtPjwYcsuiMgdyAl1kMeVeUaBNKY2_srJaGfTg'
         }
       ],
       oldMan: [
         {
           id: 0,
           type: 'image',
-          url: 'https://previews.123rf.com/images/sbego/sbego1506/sbego150600029/41822257-group-of-children-with-fruits.jpg'
+          url: 'https://lh3.googleusercontent.com/proxy/SmalBos0W-B_rEFlZRMpART2wH4gODFa9xx15yQG7H_YsJlXqgqtT6jZRinrR-q_v8z6j2g1coqE0WOh_gTIggfO3njH0EXFk-EFq1i9QhK9Nsc9x5FLpLo9SVR_hTZ9Tph0xB5xZmRZ'
         },
         {
           id: 1,
           type: 'image',
-          url: 'http://img5.imgtn.bdimg.com/it/u=2545311149,2756468368&fm=26&gp=0.jpg'
-        },
-        {
-          id: 2,
-          type: 'image',
-          url: 'https://previews.123rf.com/images/virinka/virinka1212/virinka121200020/16694385-cartoon-children-with-fruits.jpg'
-        },
-        {
-          id: 3,
-          type: 'image',
-          url: 'http://img1.imgtn.bdimg.com/it/u=390439293,432794668&fm=26&gp=0.jpg'
-        },
-        {
-          id: 4,
-          type: 'image',
-          url: 'http://img0.imgtn.bdimg.com/it/u=3532136509,714403793&fm=26&gp=0.jpg'
+          url: 'https://pic1.zhimg.com/80/v2-76cb32a35469d652e90e245206c90e24_1440w.jpg'
         }
       ],
       pregnantWoman: [
         {
           id: 0,
           type: 'image',
-          url: 'https://previews.123rf.com/images/sbego/sbego1506/sbego150600029/41822257-group-of-children-with-fruits.jpg'
+          url: 'https://www.tripgotw.com/upload/article/original/7da99230d1679ea48f18e84f53d23333.jpg'
         },
         {
           id: 1,
           type: 'image',
-          url: 'http://img5.imgtn.bdimg.com/it/u=2545311149,2756468368&fm=26&gp=0.jpg'
-        },
-        {
-          id: 2,
-          type: 'image',
-          url: 'https://previews.123rf.com/images/virinka/virinka1212/virinka121200020/16694385-cartoon-children-with-fruits.jpg'
-        },
-        {
-          id: 3,
-          type: 'image',
-          url: 'http://img1.imgtn.bdimg.com/it/u=390439293,432794668&fm=26&gp=0.jpg'
-        },
-        {
-          id: 4,
-          type: 'image',
-          url: 'http://img0.imgtn.bdimg.com/it/u=3532136509,714403793&fm=26&gp=0.jpg'
+          url: 'https://img.heho.com.tw/wp-content/uploads/2019/01/0114-%E9%81%8B%E5%8B%95%E7%9A%84%E5%AD%95%E5%A9%A6.png'
         }
       ],
       keepFit: [
         {
           id: 0,
           type: 'image',
-          url: 'https://previews.123rf.com/images/sbego/sbego1506/sbego150600029/41822257-group-of-children-with-fruits.jpg'
+          url: 'https://www.fe-amart.com.tw/images/amart/photo/gillchou/20160614-EXERCISE/10873786853_5564c767f4_o.jpg'
         },
         {
           id: 1,
           type: 'image',
-          url: 'http://img5.imgtn.bdimg.com/it/u=2545311149,2756468368&fm=26&gp=0.jpg'
+          url: 'https://thumb.jfcdns.com/up/2016-10/201610191812484415424.jpg'
         },
         {
           id: 2,
           type: 'image',
-          url: 'https://previews.123rf.com/images/virinka/virinka1212/virinka121200020/16694385-cartoon-children-with-fruits.jpg'
-        },
-        {
-          id: 3,
-          type: 'image',
-          url: 'http://img1.imgtn.bdimg.com/it/u=390439293,432794668&fm=26&gp=0.jpg'
-        },
-        {
-          id: 4,
-          type: 'image',
-          url: 'http://img0.imgtn.bdimg.com/it/u=3532136509,714403793&fm=26&gp=0.jpg'
+          url: 'https://img.heho.com.tw/wp-content/uploads/2018/12/%E8%82%8C%E5%8A%9B%E8%A8%93%E7%B7%B4.png'
         }
       ]
     },
@@ -157,7 +97,28 @@ Page({
       ],
       teenagers: [
         {
-          importantText: "婴幼儿喂养实践中，应遵循其生长的固有轨迹，合理得当，寻求其生长发育与远期健康之间的平衡，避免一味地追求近期效益而带来远期危害。身体是人类的本钱，婴幼儿更是要健康才可以茁壮成长，要是连宝宝的健康都不能保障，我们又怎么配成为他们的父母呢？所以日常一定要为宝宝的营养锻炼想办法，饮食上要注重搭配，平时也要抱抱宝宝做一些伸展手脚的运动哦！",
+          importantText: "青少年是指11岁至24岁这一阶段，统称青春期。又可分为青春发育期和青年期，该段时期的保健也很重要。",
+        },
+        {
+          importantText: '1.健康心理素质。青少年处于心理上的“断奶期”，表现为半幼稚、半成熟以及独立性与依赖性相交错的复杂现象．具有较大的可塑性。他们热情奔放、积极进取，却好高骛远，不易持久，在各方面会表现出一定的冲动性。他们对周围的事物有一定的观察分析和判断能力，但情绪波动较大，缺乏自制力，看问题偏激。有时不能明辨是非。他们虽然仍需依附于家庭，但与外界的人及环境的接触亦日益增多，其独立愿望日益强烈，不希望父母过多地干涉自己。却又缺乏社会经验，极易受外界环境的影响。师长如有疏忽，往往误入歧途。针对青少年的心理特征，培养其健康的心理素质极为重要，可从以下三个方面着手。'
+        },
+        {
+          importantText: '1．说服教育谆谆善诱 家长和教师要以身作则，为人师表，给青少年以良好影响，同时又要尊重他们独立意向的发展和自尊心，采用说服教育、积极诱导的方法，与他们交朋友谈心，关心他们的学习与生活，并设法充实和丰富他们的业余生活。有事多与他们商量，尊重他们的正确意见，逐渐给他们更多的独立权利，为他们创造一个愉快的、愿意讲话的环境，以便了解孩子的交友情况及周围环境的影响，探知他们的心理活动与情绪变化，从而有的放矢地予以教导和帮助。可以有意识有针对性地提出问题交给他们讨论。通过辩论以明确是非观念，再向他们提出更高的要求。要从积极方面启发他们的兴趣与爱好。激发他们积极进取、刻苦奋斗的精神，培养良好的个性与习惯。要教他们慎重择友，避免与坏人接触。要向他们推荐优秀书刊歹取缔不健康的读物。要鼓励他们积极参加集体活动，培养集体主义思想，逐渐树立正确的世界观和人生观，使他们有远大的理想与追求，集中精力长知识、长身体，在实际工作中锻炼坚强的意志和毅力，以求德智体美全面发展。对于他们的错误或早恋等问 题，不能采取粗暴、压制及命令的方式，仍要谆谆诱导。'
+        },
+        {
+          importantText: '2．加强自身修养 青少年的身体发育虽已接近成人，可是对环境、生活的适应能力和对事物的综合、处理能力仍然很差。，青少年应该在师长的引导协助下。在自己所处的环境中，加强思想意识的锻炼和修养，力求养成独立自觉、坚强稳定、直爽开朗、亲切活泼的个性。遇事冷静，言行适度，文明礼貌，尊老爱幼，切忌恃智好胜，侍强好斗。要有自知之明，正确地 对待就业问题，处理好个人与集体的关系，明确自己在不同场合所处的不同位置，善于角色变换，采用不同的处事方法，从而有利于社交活动，促进人事关系的和谐，有益于身心健康人'
+        },
+        {
+          importantText: '3．科学的性教育 贯穿于青春期的最大特征是性发育的开始与完成。正如《素问上古天真论》云：“丈夫…二八肾气盛，天癸至，精气溢泄”，“女子…二七而天癸至，任脉通， 太冲脉盛，且事以时下”。男女青年，肾气初盛。天癸始至，具有了生育能力。其心理方面的最大变化也反映在性心理领域，“性意识萌发，处于股陇状态。由于青年人的情绪易于波动，自制力差，若受社会不良现象的影响、常可使某些青年滋长不健康性心理，以致早恋础，荒废学业。有的甚至触犯刑法，走上犯罪道路。因此，青春期的性教育尤为重要。'
+        },
+        {
+          importantText: '2.饮食调摄。青少年生长发育迅速，代谢旺盛。必须全面合理地摄取营养，要特别注重蛋白质和热能的补充。碳水化合物、脂肪是热能的主要来源，碳水化合物主要含于粮食之中，青少年应保证足够的饭量，增加粗粮在主食中的比例，并摄入适量的脂肪。女青年不应为减肥而过度节食，以致营养不良。男青年也不可自恃体强而暴饮暴食，饥饱寒热无度。对批天不足体质较弱者，更应抓紧发育对期的饮食调摄，培补后天以补其先天不足。'
+        },
+        {
+          importantText: '3.良好生活习惯。青少年不应自传体壮、精力旺盛而过劳。应该根据具体情况科学地安排作息时间，做到“起居有时，不安作劳”。既要专心致志地工作、学习，又要有适当的户外活动和正当的娱乐休息，保证充足的睡眠。如此方能保证精力充沛。提高学习、工作效率，有利于身心健康。要养成良好的卫生习惯，注意口腔卫生。读书、写字、站立时应保持正确姿势，以促进正常发育，预防疾病的发生。变声期要特别注意保护好嗓子，还应避免沾染吸烟，酗酒等恶习，吸烟、酗酒不仅危害身体，而且影响心理健康如吸烟可使青年注意力涣散，记忆力减退，思辨不灵，学习效率降低。'
+        },
+        {
+          importantText: '4.参加体育锻炼。持之以恒的体育锻炼，是促进青少年生长发育，提高身体素质的关键因素。要注意身体的全面锻炼，选择项目时，要同时兼顾力量、速度、耐力、灵敏度等各项素质的发展，重点应放 在耐力素质的培养上。力量的锻炼项目有短跑，耐力的锻炼项目有长跑、游泳等，灵敏的锻炼项目有跳远、跳高、球类运动，尤其是乒乓球。上述有些体育项目关系着几项素质的发展。如游泳，既可锻炼耐力，又可锻炼速度和力量，是青少年最适宜的运动项目。'
         }
       ],
       oldMan: [

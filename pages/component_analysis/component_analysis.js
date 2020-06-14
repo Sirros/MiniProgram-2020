@@ -123,7 +123,10 @@ Page({
       })
     },
       fail: err => { 
-        console.error('[云函数] [OCRUtil] 调用失败', err)
+        console.error('[云函数] [OCRUtil] 调用失败', err),
+        that.setData({
+          loadModal: false
+        })
       }
     })    
     console.log(this.analysisRES)

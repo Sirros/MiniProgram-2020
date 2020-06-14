@@ -42,20 +42,5 @@ Page({
         result: temp
       })
     })
-  },
-
-  /**
-   * 自定义函数
-   */
-  // 搜索详情后跳转至详情页
-  searchDetail(e) {
-    console.log(e)
-  },
-  // 获取输入值
-  getIndex(value) {
-    console.log(value)
-  },
-  goToDetail(e) {
-    console.log(e)
   }
 })

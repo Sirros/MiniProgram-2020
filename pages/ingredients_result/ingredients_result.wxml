@@ -2,15 +2,6 @@
   <view slot="backText">返回</view>
   <view slot="content">配料表识别结果</view>
 </cu-custom>
-<!-- <view class="cu-bar bg-white search fixed" style="top:{{ CustomBar }}px;">
-  <view class="search-form round">
-    <text class="cuIcon-search"></text>
-    <input type="text" placeholder="请输入需要查看详情的成分名称" bindinput="getIndex" confirm-type="search" ></input>
-  </view>
-  <view class="action">
-    <button class="cu-btn bg-gradual-blue shadow-blur round" bindtap="searchDetail">搜索详情</button>
-  </view>
-</view> -->
 <view class="table bg-white">
   <view class="tr bg-w">
     <view class="th th-name">成分名称</view>

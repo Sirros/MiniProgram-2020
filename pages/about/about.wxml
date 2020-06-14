@@ -29,6 +29,9 @@
       <view class='margin-top-sm'>
       该项目是一款用于分析食品成分的健康程度的微信小程序，这个项目使用的第三方ui库是colorui，colorui是一款具有高颜值的微信小程序组件库，它也是一个开源项目，感谢作者。
       </view>
+      <view class='margin-top-sm'>
+      小程序中出现的人物图像均由网上获取。
+      </view>
     </view>
   </view>
 </scroll-view>
