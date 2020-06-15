@@ -11,18 +11,59 @@
   </view>
   <block wx:for="{{ resList }}" wx:key="{{ item.code }}">
     <view class="tr bg-g" wx:if="{{ index % 2 == 0 }}">
-      <view class="td td-name" data-index="{{ item.index }}" bindtap="goToDetail">{{ item.name }}</view>
-      <view class="td td-type">{{ item.type }}</view>
-      <view class="td td-level">{{ item.level }}</view>
+      <view class="td td-name" data-index="{{ item.index }}" bindtap="goToDetail">
+        <text class="text-black text-bold">{{ item.name }}</text>
+      </view>
+      <view class="td td-type"><text class="text-gray">{{ item.type }}</text></view>
+      <!-- 健康程度block -->
+      <block>
+        <view wx:if="{{ item.level == 1 }}" class="td td-level">
+          <text class="text-green text-bold">①</text>
+        </view>
+        <view wx:elif="{{ item.level == 2 }}" class="td td-level">
+          <text class="text-green text-bold">②</text>
+        </view>
+        <view wx:elif="{{ item.level == 3 }}" class="td td-level">
+          <text class="text-yellow text-bold">③</text>
+        </view>
+        <view wx:elif="{{ item.level == 4 }}" class="td td-level">
+          <text class="text-red text-bold">④</text>
+        </view>
+        <view wx:else class="td td-level">
+          <text class="text-red text-bold">⑤</text>
+        </view>
+      </block>
       <view class="td td-risk" wx:if="{{item.risk !== null}}">{{ item.risk }}</view>
-      <view class="td td-risk" wx:else>无</view>
+      <view class="td td-risk" wx:else>
+        <text class="text-gray"></text>
+      </view>
     </view> 
     <view class="tr bg-white" wx:else>
-      <view class="td td-name">{{ item.name }}</view>
-      <view class="td td-type">{{ item.type }}</view>
-      <view class="td td-level">{{ item.level }}</view>
+      <view class="td td-name"><text class="text-black text-bold">{{ item.name }}</text>
+      </view>
+      <view class="td td-type"><text class="text-gray">{{ item.type }}</text></view>
+      <!-- 健康程度block -->
+      <block>
+        <view wx:if="{{ item.level == 1 }}" class="td td-level">
+          <text class="text-green text-bold">①</text>
+        </view>
+        <view wx:elif="{{ item.level == 2 }}" class="td td-level">
+          <text class="text-green text-bold">②</text>
+        </view>
+        <view wx:elif="{{ item.level == 3 }}" class="td td-level">
+          <text class="text-yellow text-bold">③</text>
+        </view>
+        <view wx:elif="{{ item.level == 4 }}" class="td td-level">
+          <text class="text-red text-bold">④</text>
+        </view>
+        <view wx:else class="td td-level">
+          <text class="text-red text-bold">⑤</text>
+        </view>
+      </block>
       <view class="td td-risk" wx:if="{{item.risk !== null}}">{{ item.risk }}</view>
-      <view class="td td-risk" wx:else>无</view>
+      <view class="td td-risk" wx:else>
+        <text class="text-gray"></text>
+      </view>
     </view>
   </block>
 </view>
