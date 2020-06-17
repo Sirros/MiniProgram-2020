@@ -2,9 +2,19 @@
   <cu-custom bgColor="bg-gradual-green">
     <view slot="content">食品成分分析</view>
   </cu-custom>
+<view class="cu-bar bg-white search fixed" style="height:50px;top:{{CustomBar}}px;">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="输入搜索的食品添加剂关键词" confirm-type="search" bindinput="getValue"></input>
+  </view>
+  <view class="action">
+    <button class="cu-btn bg-gradual-green shadow-blur round" bindtap="toSearch">搜索</button>
+  </view>
+</view>
   <scroll-view>
     <!-- 内容块 -->
-    <view class="bg-gray radius shadow-blur">
+    
+    <view class="bg-gray radius shadow-blur" style="top:50px;">
       <!-- 轮播图 -->
       <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
         <swiper-item wx:for="{{swiperList}}" wx:key>
@@ -17,7 +27,7 @@
         <view class="cu-item shadow card-btn">
           <button class="cu-btn  bg-blue lg" role="button" aria-disabled="false" bindtap="toAnalysis">开始识别</button>
           <view class="text-olive text-center card-btn-title"> 
-            <text>点击上传食品营养表，摄入最健康的营养成分</text>
+            <text>点击上传食品包装袋信息，分析食物健康程度</text>
           </view>
         </view>
       </view>

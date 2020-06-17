@@ -17,7 +17,7 @@
       <view class="td td-type"><text class="text-gray">{{ item.type }}</text></view>
       <!-- 健康程度block -->
       <block>
-        <view wx:if="{{ item.level == 1 }}" class="td td-level">
+        <view wx:if="{{ item.level <= 1 }}" class="td td-level">
           <text class="text-green text-bold">①</text>
         </view>
         <view wx:elif="{{ item.level == 2 }}" class="td td-level">

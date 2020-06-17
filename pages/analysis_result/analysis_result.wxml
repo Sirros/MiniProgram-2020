@@ -1,8 +1,22 @@
 <cu-custom bgColor="bg-gradual-blue" isBack="{{ true }}">
   <view slot="backText">返回</view>
   <view slot="content">养分识别结果</view>
-</cu-custom>	 
-<view class="cu-list menu menuBorder" style="margin-top:{{ CustomBar }}px;">
+</cu-custom>
+<view class="cu-card case no-card">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+       <view class="solids-bottom padding-xs flex align-center">
+        <view class="solid-bottom text-xl padding">
+          <view class="text-blue text-bold">{{calo}}</view>
+          </view>
+          <view class="text-grey">千卡/100克</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>	 
+<view class="cu-list menu menuBorder" style="margin-top:10px;">
   <view class="cu-item">
     <view class="content">
       <view class="first-sub-content">
@@ -17,7 +31,7 @@
   </view>
   <view class="cu-item" wx:for="{{ result }}">
     <view class="content text-df">
-      <text class="text-black first-sub-content" bindtap="goToDetail">{{ item.name }}</text>
+      <text class="text-blue first-sub-content" bindtap="goToDetail">{{ item.name }}</text>
       <view class="content second-sub-content text-df">
         <text class="text-black content-item1">{{ item.value }}</text>
         <text class="text-black content-item2">{{ item.nrv }}</text>

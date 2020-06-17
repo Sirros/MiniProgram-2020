@@ -2,32 +2,17 @@
   <view slot="backText">返回</view>
   <view slot="content">配料详情</view>
 </cu-custom>
-<block wx:if="{{ detailInfo.length !== 0 }}" >
+
+<block wx:if="{{ detailInfo.length !== 0 }}" style="margin-top:10px;">
   <view class="table"  wx:for="{{ detailInfo[0] }}" wx:for-index="key" wx:for-item="value">
-    <view class="bg-w" wx:if="{{ key === 'CAS' || key === 'GB/T' || key === 'chemical_weight' || key === 'en_name' || key === 'made' || key === 'poison' || key === 'type' }}">
-      <view class="tr-default"  wx:if="{{ key === 'made'  || key === 'poison' }}">
-        <view class="td-key">{{ key }}：</view>
-        <view class="td-value">{{ value }}</view>
-      </view>
-      <view class="tr" wx:else>
-        <view class="td-key">{{ key }}：</view>
-        <view class="td-value">{{ value }}</view>
-      </view>
+      <view class="cu-form-group" style="border-bottom:solid 1px #dfdfdf">
+		    <text class="text-bold text-blue" style="width:100px;">{{key}}</text>
+		    <text style="height:auto-height;margin-left:50px;">{{value}}"</text>
+	    </view>
     </view>
-    <view class="bg-g" wx:else>
-      <view class="tr-default"  wx:if="{{ key === 'made'  || key === 'poison' || key === 'description' }}">
-        <view class="td-key">{{ key }}:</view>
-        <view class="td-value">{{ value }}</view>
-      </view>
-      <view class="tr" wx:else>
-        <view class="td-key">{{ key }}:</view>
-        <view class="td-value">{{ value }}</view>
-      </view>
-    </view>
-  </view>
 </block>
 <block wx:else>
   <view>
-    暂无数据哈宝贝儿～
+    非常抱歉，暂无详细数据
   </view>
 </block>

@@ -1,0 +1,13 @@
+<!--pages/search_result/search_result.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">添加剂搜索结果</view>
+</cu-custom>
+<view class="table bg-white">
+  <block wx:for="{{ resList }}" wx:key="{{ item.code }}">
+      <view class="td td-name" data-index="{{ item.index }}" bindtap="goToDetail" style="height:50px;border-bottom:solid 1px #dfdfdf;padding:10px">
+        <text class="text-black text-bold">{{ item.name }}</text>
+      </view>
+      
+  </block>
+</view>

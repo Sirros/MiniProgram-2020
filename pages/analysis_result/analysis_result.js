@@ -7,7 +7,8 @@ Page({
     result:'',
     type: '',
     CustomBar: app.globalData.CustomBar,
-    Index: undefined
+    Index: undefined,
+    calo:0.0
   },
 
   /**
@@ -15,6 +16,13 @@ Page({
    */
   onLoad: function (options) {
     let temp = JSON.parse(options.result)
+    let len = temp.length
+    let cal = temp[len-1]
+    this.setData({
+      calo:cal.value
+    })
+    temp.pop()
+    console.log(cal)
     console.log(temp)
     temp.forEach(item => {
       let that = this
@@ -33,7 +41,7 @@ Page({
       } else {
         
         console.log(that.type)
-        item.caution = '低'
+        item.caution = '中'
       }
       if(item.nrv === 'undefined%' || item.nrv === ' ') {
         item.nrv = '0%'

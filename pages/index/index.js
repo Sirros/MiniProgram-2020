@@ -5,6 +5,7 @@ const db = wx.cloud.database()
 
 Page({
   data: { 
+    CustomBar:app.globalData.CustomBar,
     swiperList: [
       {
         id: 0,
@@ -68,7 +69,8 @@ Page({
     gridCol: 3,
     articles: [],
     mainContentHidden: true,
-    indexPageLoadingTime: 1500
+    indexPageLoadingTime: 1500,
+    searchStr : "1"
   },
   /**
    * 生命周期函数
@@ -103,6 +105,30 @@ Page({
       url: '../component_analysis/component_analysis',
     })
   }, 
+  toSearch(e){
+    console.log(e)
+     wx.cloud.callFunction({
+       name:'SearchIngrediant',
+       data:{
+         str:this.searchStr
+       },
+       success:res=>{
+         console.log(res)
+         wx.navigateTo({
+          url: '../search_result/search_result?result=' + JSON.stringify(res.result.data),
+        })
+       }
+     })
+  },
+  getValue(e){
+    const _this = this
+    console.log(this.searchStr)
+    _this.setData({
+      searchStr:e.detail.value
+    })
+    this.searchStr = e.detail.value
+    console.log(this.searchStr)
+  },
   toDetail(e) {
     console.log(e)
     let articleId = e.currentTarget.dataset._id
